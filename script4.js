@@ -122,10 +122,10 @@
                         gap: 10px;
                         margin-bottom: 12px;
                         padding: 6px 14px;
-                        background: rgba(255, 255, 255, 0.2);
+                        background: rgba(255, 255, 255, 0.1);
                         backdrop-filter: blur(12px);
                         border-radius: 40px;
-                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
                     `;
                     editor.parentNode.insertBefore(container, editor);
                 } else {

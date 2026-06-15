@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Notepad Pro Ultimate - วางรูปอิสระ + บันทึกพร้อมฉากหลัง</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body class="bg-image-mode">
+    <div class="app-container">
+        <div class="status-bar">
+            <span id="fileStatus">📄 คลิกวางรูปอิสระ + ลากวางรูปจากภายนอก | ปรับขนาดตัวอักษร</span>
+            <span id="charCount">0 ตัวอักษร | 0 คำ</span>
+        </div>
+        <div class="control-bar">
+            <div class="control-group">
+                <span>🎨 ความโปร่งใส:</span>
+                <input type="range" id="opacitySlider" class="opacity-slider" min="10" max="60" value="25">
+                <span id="opacityValue">25%</span>
+                <button id="resetOpacityBtn" class="small-btn">รีเซ็ต</button>
+            </div>
+            <div class="control-group">
+                <span>🔤 ขนาดตัวอักษร:</span>
+                <button id="fontDecrease" class="font-size-btn">A-</button>
+                <button id="fontIncrease" class="font-size-btn">A+</button>
+                <button id="fontReset" class="small-btn">คืนค่า</button>
+            </div>
+            <div class="control-group">
+                <span>🖼️ พื้นหลัง:</span>
+                <button id="toggleBgBtn" class="small-btn">สลับโหมด</button>
+            </div>
+            <div class="control-group">
+                <span>📊 สรุป:</span>
+                <button id="btnSummary" class="small-btn">แสดงข้อมูล</button>
+            </div>
+        </div>
+        <div class="editor-wrapper" id="capture">
+            <div class="lines" id="lines"></div>
+            <div id="editor" contenteditable="true" spellcheck="false"></div>
+        </div>
+    </div>
+
+    <input type="file" id="imgInput" accept="image/*">
+    <input type="color" id="colorPicker">
+
+    <div class="fab-container">
+        <button class="fab fab-red" id="btnOpen" title="เปิดไฟล์ (Ctrl+O)">📂</button>
+        <button class="fab fab-green" id="btnSave" title="บันทึกไฟล์ (Ctrl+S)">💾</button>
+        <button class="fab fab-yellow" id="btnSaveAs" title="บันทึกเป็น">📑</button>
+        <button class="fab fab-brown" id="btnSaveAll" title="บันทึกข้อความ+รูป+ตำแหน่งอิสระ (กด 7)">💿</button>
+        <button class="fab fab-indigo" id="btnLoadAll" title="โหลดพร้อมรูป (กด 9)">📀</button>
+        <button class="fab fab-gold" id="btnExportHTML" title="ส่งออก HTML (Ctrl+E)">🌐</button>
+        <button class="fab fab-python" id="btnPython" title="บันทึก Python (กด 8)">🐍</button>
+        <button class="fab fab-cyan" id="btnImage" title="เพิ่มรูป (แทรกที่カーเซอร์)">🖼️➕</button>
+        <button class="fab fab-floating-place" id="btnFloatingPlace" title="วางรูปอิสระ (คลิกตำแหน่งใดก็ได้)">📍</button>
+        <button class="fab fab-maroon" id="btnRemoveSelectedImg" title="ลบรูปที่เลือก (คลิกที่รูป/ข้อความก่อน)">❌🖼️</button>
+        <button class="fab fab-purple" id="btnColor" title="เปลี่ยนสีข้อความ">🎨</button>
+        <button class="fab fab-lime" id="btnSpeak" title="อ่านข้อความ">🔊</button>
+        <button class="fab fab-orange" id="btnVoice" title="สั่งงานด้วยเสียง">🎤</button>
+        <button class="fab fab-blue" id="btnClear" title="ล้างทั้งหมด">🗑️</button>
+        <button class="fab fab-teal" id="btnScreenshot" title="จับภาพหน้าจอ">📸</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+
+</body>
+</html>

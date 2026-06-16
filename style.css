@@ -1,4 +1,6 @@
-/* Reset และ base */
+/* ============================================================
+   Reset & Base
+   ============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +25,9 @@ body.bg-gradient-mode {
     background-attachment: fixed !important;
 }
 
+/* ============================================================
+   App Layout
+   ============================================================ */
 .app-container {
     display: flex;
     flex-direction: column;
@@ -31,6 +36,9 @@ body.bg-gradient-mode {
     overflow: hidden;
 }
 
+/* ============================================================
+   Status Bar
+   ============================================================ */
 .status-bar {
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
@@ -43,6 +51,9 @@ body.bg-gradient-mode {
     flex-shrink: 0;
 }
 
+/* ============================================================
+   Control Bar
+   ============================================================ */
 .control-bar {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
@@ -64,6 +75,7 @@ body.bg-gradient-mode {
 .control-group span {
     color: #ffd700;
 }
+
 .opacity-slider {
     width: 150px;
     cursor: pointer;
@@ -78,6 +90,7 @@ body.bg-gradient-mode {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .small-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -92,6 +105,7 @@ body.bg-gradient-mode {
     background: rgba(255, 215, 0, 0.3);
     transform: scale(1.02);
 }
+
 .font-size-btn {
     background: rgba(255, 215, 0, 0.3);
     border-radius: 50%;
@@ -107,6 +121,9 @@ body.bg-gradient-mode {
     color: black;
 }
 
+/* ============================================================
+   Editor
+   ============================================================ */
 .editor-wrapper {
     display: flex;
     flex: 1;
@@ -164,7 +181,9 @@ body.bg-gradient-mode {
     background: rgba(255, 215, 0, 0.3);
 }
 
-/* รูปแบบการ์ดรูป */
+/* ============================================================
+   Image Card
+   ============================================================ */
 .image-card {
     display: inline-block;
     margin: 12px 16px 12px 8px;
@@ -223,7 +242,9 @@ body.bg-gradient-mode {
     pointer-events: auto;
 }
 
-/* ข้อความซ้อนทับ */
+/* ============================================================
+   Text Overlay
+   ============================================================ */
 .text-overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.75);
@@ -259,6 +280,9 @@ body.bg-gradient-mode {
     cursor: grabbing;
 }
 
+/* ============================================================
+   Image Card Buttons
+   ============================================================ */
 .image-card-buttons {
     display: flex;
     gap: 8px;
@@ -288,7 +312,9 @@ body.bg-gradient-mode {
     background: #1e2a4a;
 }
 
-/* Floating Action Buttons */
+/* ============================================================
+   Floating Action Buttons (FAB)
+   ============================================================ */
 .fab-container {
     position: fixed;
     bottom: 20px;
@@ -317,6 +343,8 @@ body.bg-gradient-mode {
     transform: translateY(-3px) scale(1.05);
     filter: brightness(1.1);
 }
+
+/* FAB Colors */
 .fab-red    { background: #e74c3c; }
 .fab-green  { background: #2ecc71; }
 .fab-yellow { background: #f1c40f; color: #333; }
@@ -334,7 +362,9 @@ body.bg-gradient-mode {
 .fab-maroon { background: #800000; }
 .fab-floating-place { background: #00ACC1; }
 
-/* Toast */
+/* ============================================================
+   Toast
+   ============================================================ */
 .toast {
     position: fixed;
     bottom: 90px;
@@ -363,6 +393,9 @@ body.bg-gradient-mode {
     }
 }
 
+/* ============================================================
+   Animations
+   ============================================================ */
 .speaking {
     animation: pulse 0.5s ease infinite;
 }
@@ -371,10 +404,16 @@ body.bg-gradient-mode {
     50% { opacity: 0.7; }
 }
 
+/* ============================================================
+   Hidden Inputs
+   ============================================================ */
 #imgInput, #colorPicker {
     display: none;
 }
 
+/* ============================================================
+   Scrollbar
+   ============================================================ */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -388,6 +427,9 @@ body.bg-gradient-mode {
     border-radius: 10px;
 }
 
+/* ============================================================
+   Responsive - Tablet (≤ 768px)
+   ============================================================ */
 @media (max-width: 768px) {
     .fab {
         width: 42px;
@@ -401,5 +443,102 @@ body.bg-gradient-mode {
     .text-overlay {
         font-size: 11px;
         padding: 3px 8px;
+    }
+}
+
+/* ============================================================
+   Responsive - Mobile Small (≤ 375px)  ✅ เพิ่มเติม
+   ============================================================ */
+@media (max-width: 375px) {
+    /* Status & Control */
+    .status-bar {
+        font-size: 10px;
+        padding: 4px 10px;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+    .control-bar {
+        padding: 4px 10px;
+        gap: 8px;
+    }
+    .control-group {
+        font-size: 10px;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+    .opacity-slider {
+        width: 80px;
+    }
+    .small-btn {
+        font-size: 9px;
+        padding: 2px 8px;
+    }
+    .font-size-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+    }
+
+    /* Editor & Lines */
+    .lines {
+        font-size: 10px;
+        padding: 8px 4px 8px 8px;
+        min-width: 30px;
+        max-width: 40px;
+    }
+    .lines div {
+        height: 16px;
+    }
+    #editor {
+        font-size: 12px;
+        padding: 8px 12px;
+        line-height: 1.4;
+    }
+
+    /* Image Card */
+    .img-wrapper img {
+        max-width: 120px;
+        max-height: 100px;
+    }
+    .image-card {
+        padding: 6px;
+        margin: 6px 8px 6px 4px;
+        border-radius: 12px;
+    }
+    .image-card-buttons button {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+    .image-card.floating .drag-handle {
+        font-size: 9px;
+        padding: 1px 6px;
+    }
+
+    /* Text Overlay */
+    .text-overlay {
+        font-size: 10px;
+        padding: 3px 6px;
+        border-radius: 20px;
+    }
+
+    /* FAB */
+    .fab {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    .fab-container {
+        bottom: 12px;
+        right: 12px;
+        gap: 6px;
+    }
+
+    /* Toast */
+    .toast {
+        font-size: 11px;
+        padding: 6px 14px;
+        bottom: 70px;
+        white-space: normal;
+        max-width: 90%;
     }
 }

@@ -122,7 +122,7 @@ body.bg-gradient-mode {
 }
 
 /* ============================================================
-   Editor
+   Editor (✅ ปรับขนาดตัวอักษรแล้ว)
    ============================================================ */
 .editor-wrapper {
     display: flex;
@@ -165,7 +165,7 @@ body.bg-gradient-mode {
     overflow-x: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
-    font-size: 14px;
+    font-size: 16px; /* ✅ ปรับจาก 14px เป็น 16px */
     line-height: 1.6;
     font-family: inherit;
     color: #f0f0f0;
@@ -313,14 +313,14 @@ body.bg-gradient-mode {
 }
 
 /* ============================================================
-   Floating Action Buttons (FAB)
+   Floating Action Buttons (FAB - ✅ ปรับระยะห่างแล้ว)
    ============================================================ */
 .fab-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;    /* ✅ ปรับจาก 20px เป็น 30px */
+    right: 30px;     /* ✅ ปรับจาก 20px เป็น 30px */
     display: flex;
-    gap: 10px;
+    gap: 15px;       /* ✅ ปรับจาก 10px เป็น 15px */
     z-index: 1000;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -447,7 +447,7 @@ body.bg-gradient-mode {
 }
 
 /* ============================================================
-   Responsive - Mobile Small (≤ 375px)  ✅ เพิ่มเติม
+   Responsive - Mobile Small (≤ 375px) 
    ============================================================ */
 @media (max-width: 375px) {
     /* Status & Control */
@@ -490,7 +490,7 @@ body.bg-gradient-mode {
         height: 16px;
     }
     #editor {
-        font-size: 12px;
+        font-size: 14px; /* ✅ ปรับจาก 12px เป็น 14px (พอดีกับจอเล็ก) */
         padding: 8px 12px;
         line-height: 1.4;
     }
@@ -523,14 +523,14 @@ body.bg-gradient-mode {
 
     /* FAB */
     .fab {
-        width: 36px;
-        height: 36px;
+        width: 38px;   /* ✅ ขยายจาก 36px เล็กน้อย */
+        height: 38px;
         font-size: 16px;
     }
     .fab-container {
-        bottom: 12px;
-        right: 12px;
-        gap: 6px;
+        bottom: 16px;
+        right: 16px;
+        gap: 8px;      /* ✅ ระยะห่างแคบลงตามสัดส่วน */
     }
 
     /* Toast */
